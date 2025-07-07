@@ -49,7 +49,7 @@
             </div>
             <ul class="menu">
                 <li class="menu-item menu-item-static active">
-                    <a href="http://localhost/prograweb/practicapagina.html?#" class="menu-link">
+                    <a href="https://axel00000000.github.io/Portafolio/" class="menu-link">
                         <i class="bx bx-home"></i>
                         <span>Home</span>
                     </a>
@@ -85,7 +85,7 @@
                     <a href="#">¿Olvidaste la contraseña?</a>
                 </div>
 
-                <button type="submit" class="boton-login">Iniciar Sesión</button>
+                <button type="button" id="loginBtn" class="boton-login">Iniciar Sesión</button>
             </form>
 
             <div class="separador">
@@ -113,5 +113,21 @@
     </div>
 
     <script src="js/componente.js"></script>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('loginBtn');
+        btn.addEventListener('click', () => {
+          const user = document.getElementById('usuario').value.trim();
+          const pass = document.getElementById('contraseña').value;
+          if (user === 'AXEL' && pass === '23DEMAYO') {
+            window.location.href = 'https://axel00000000.github.io/Portafolio';
+          } else {
+            alert('Usuario o contraseña incorrectos');
+          }
+        });
+      });
+    </script>
 </body>
 </html>
