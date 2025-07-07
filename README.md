@@ -41,7 +41,7 @@ Login:
 * Campos para usuario y contraseña.
 * Acceso rápido con redes sociales.
 * Enlaces para registro y recuperación de contraseña.
-* validacion de usuario y contreñas.
+* validacion de usuario y contraseñas.
 ```html
  <div class="main-content">
         <div class="contenedor">
