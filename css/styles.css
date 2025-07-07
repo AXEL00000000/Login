@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #13ba5e);
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Eliminar el padding del contenedor principal */
+.contenedor {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Quitar margen automático */
+    margin: 0 auto;
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.encabezado h1 {
+    color: #2ed019;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    color: #606770;
+    font-size: 16px;
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1c1e21;
+    font-weight: 600;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.grupo-formulario input:focus {
+    outline: none;
+    border-color: #2ed019;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+/* Opciones */
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+}
+
+.recordar input {
+    margin-right: 8px;
+}
+
+.opciones a {
+    color: #27b514;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.opciones a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de login */
+.boton-login {
+    width: 100%;
+    background: #27b514;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.boton-login:hover {
+    background: #2ed019;
+}
+
+/* Separador */
+.separador {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.separador .linea {
+    flex: 1;
+    height: 1px;
+    background: #dddfe2;
+}
+
+.separador .texto {
+    padding: 0 10px;
+    color: #606770;
+    font-size: 14px;
+}
+
+/* Botones sociales */
+.botones-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.boton-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.twitter {
+    background: #1da1f2;
+}
+
+.google {
+    background: #db4437;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #dddfe2;
+}
+
+.pie-pagina a {
+    color: #27b514;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pie-pagina a:hover {
+    text-decoration: underline;
+}
