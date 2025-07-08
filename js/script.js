@@ -35,8 +35,8 @@ menuBtn.addEventListener("click", () => {
 // Login
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('loginBtn').addEventListener('click', () => {
-        const user = document.getElementById('usuario').value.trim();
-        const pass = document.getElementById('contraseña').value;
+        const usuario = document.getElementById('usuario').value.trim();
+        const contrasenia = document.getElementById('contraseña').value;
         if (user === 'AXEL' && pass === '23DEMAYO')
             window.location.href = 'https://axel00000000.github.io/Portafolio';
         else
