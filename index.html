@@ -1,71 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema con Menú y Login</title>
-    <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #13ba5e);
+        }
+
+        .card-login {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 1rem;
+            max-width: 400px;
+            height: 600px;
+            ;
+        }
+
+        .text-primary-custom {
+            color: #2ed019 !important;
+        }
+
+        .btn-primary-custom {
+            background-color: #27b514;
+            border-color: #27b514;
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #2ed019;
+            border-color: #2ed019;
+            color: white;
+        }
+
+        a.text-primary-custom:hover {
+            text-decoration: underline;
+        }
+
+        .underline-hover:hover {
+            text-decoration: underline !important;
+        }
+
+        .btn-icon {
+            width: 45px;
+            height: 45px;
+            padding: 0;
+        }
+
+        .btn-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
 </head>
 
-<body>
-    <div class="sidebar" id="sidebar">
-        <div class="header">
-            <div class="menu-btn" id="menu-btn">
-                <i class='bx bx-chevron-left'></i>
-            </div>
-            <div class="brand">
-                <img src="img/logo2.png" alt="logo">
-                <span>Portafolio</span>
-            </div>
-        </div>
-        <div class="menu-container">
-            <div class="search">
-                <i class="bx bx-search"></i>
-                <input type="search" placeholder="Buscar">
-            </div>
-            <ul class="menu">
-                <li class="menu-item menu-item-static active">
-                    <a href="https://axel00000000.github.io/Portafolio/" class="menu-link"><i class="bx bx-home"></i><span>Home</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="main-content">
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="container">
         <div class="card card-login mx-auto shadow-sm p-4">
             <div class="text-center mb-4">
                 <h2 class="text-primary-custom">Iniciar sesión</h2>
                 <p class="text-secondary">Inicia sesión para continuar</p>
             </div>
+
             <form>
                 <div class="mb-3">
                     <label for="usuario" class="form-label">Usuario</label>
                     <input type="text" id="usuario" class="form-control" placeholder="Ingresa tu usuario" required />
                 </div>
+
                 <div class="mb-3">
                     <label for="contraseña" class="form-label">Contraseña</label>
                     <input type="password" id="contraseña" class="form-control" placeholder="Ingresa tu contraseña"
                         required />
                 </div>
+
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="recordar" />
                         <label class="form-check-label" for="recordar">Recordarme</label>
                     </div>
-                    <a href="#" class="text-primary-custom underline-hover">¿Olvidaste la contraseña?</a>
+                    <a href="#" class="text-primary-custom text-decoration-none underline-hover">¿Olvidaste la
+                        contraseña?</a>
                 </div>
+
                 <button type="button" id="loginBtn" class="btn btn-primary-custom w-100 mb-3"><strong>Iniciar
                         Sesión</strong></button>
+
                 <div class="d-flex align-items-center text-secondary mb-3">
-                    <hr class="flex-grow-1" /><span class="px-2">o continúa con</span>
+                    <hr class="flex-grow-1" />
+                    <span class="px-2">o continúa con</span>
                     <hr class="flex-grow-1" />
                 </div>
+
                 <div class="d-flex justify-content-center gap-3 mb-3">
                     <a href="https://www.facebook.com/" class="btn btn-light rounded-circle btn-icon">
                         <img src="img/facebook.svg">
@@ -75,19 +110,36 @@
                     </a>
                     <a href="https://accounts.google.com/v3/signin/accountchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=asw-gmail-globalnav-signin&flowEntry=AccountChooser&flowName=GlifWebSignIn&service=mail&dsh=S1897476890%3A1751962997586782"
                         class="btn btn-light rounded-circle btn-icon">
-                        <img src="img/google2.svg">
+                        <img src="img/google.svg">
                     </a>
                 </div>
+
                 <div class="text-center">
-                    <p class="mb-0">¿No tienes cuenta? <a href="#"
-                            class="text-primary-custom fw-bold underline-hover">Regístrate aquí</a></p>
+                    <p class="mb-0">¿No tienes cuenta?
+                        <a href="#" class="text-primary-custom fw-bold text-decoration-none underline-hover">Regístrate
+                            aquí</a>
+                    </p>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Scripts personalizados -->
-    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('loginBtn');
+            btn.addEventListener('click', () => {
+                const user = document.getElementById('usuario').value.trim();
+                const pass = document.getElementById('contraseña').value;
+                if (user === 'AXEL' && pass === '23DEMAYO') {
+                    window.location.href = 'https://axel00000000.github.io/Portafolio';
+                } else {
+                    alert('Usuario o contraseña incorrectos');
+                }
+            });
+        });
+    </script>
 </body>
+
+</html>
 
 </html>
